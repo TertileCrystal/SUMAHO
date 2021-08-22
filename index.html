@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    
+    <title>SUMAHO</title>
+</head>
+<body class="bg-white text-black">
+    <script type="text/javascript" src="https://tertilecrystal.com/SUMAHO/main.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <main>
+        <div class="h-64 text-center p-64s" data-screen="home">
+            <p class="text-6xl font-bold">HOME Screen</p>
+        </div>
+        <div class="h-64 text-center p-64s" data-screen="calender">
+            <p class="text-6xl font-bold">Calender Screen</p>
+        </div>
+        <div class="h-64 text-center p-64s" data-screen="setting">
+            <p class="text-6xl font-bold">Setting Screen</p>
+        </div>
+
+        <div class="flex w-10/12 bg-gray-200 rounded-full h-16 m-3 ml-8" data-screen="bottom">
+            <div class="flex-1 m-5 text-center text-lg font-bold cursor-pointer" data-screen-btn="home">
+                HOME
+            </div>
+            <div class="flex-1 m-5 text-center text-lg font-bold cursor-pointer" data-screen-btn="calender">
+                Calender
+            </div>
+            <div class="flex-1 m-5 text-center text-lg font-bold cursor-pointer" data-screen-btn="setting">
+                Setting
+            </div>
+        </div>
+    </main>
+</body>
+</html>
