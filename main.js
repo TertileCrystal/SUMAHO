@@ -1,50 +1,23 @@
-var obj;
-var screen_list;
+class sumaho{
+    constructor(settings){
+        this.menu = document.getElementById(settings.menu);
 
-window.onload = function(){
-    obj = document.getElementsByTagName('div');
+        this.screen_list = {};
 
-    screen_list = [];
-    
-    for(var i = 0; i < obj.length; i++){
-        try{    
-            screen_id = obj[i].getAttribute('data-screen');
-            screen_btn_id = obj[i].getAttribute('data-screen-btn');
+        settings.screen.forEach(screen =>{
+            this.screen_list[screen[0]] = [document.getElementById(screen[0]), screen[1] || "none"];
+            this.screen_list[screen[0]][0].style.display = 'none';
+        });   
 
-            if(screen_btn_id){
-                obj[i].addEventListener("click", function(){
-                    id = this.getAttribute('data-screen-btn');
-                    
-                    change_screen(id);
-                });
-            }
-
-            if(screen_id){
-                screen_list[screen_id] = obj[i];
-
-                if(screen_id != "bottom"){
-                    obj[i].style.overflow = "auto";
-                    obj[i].style.display = 'none';
-                }
-            }
-        }catch(e){
-
-        }
+        this.screen_list["home"] = [document.getElementById(settings.home[0]), settings.home[1] || "none"];
     }
 
-    bottom_obj = screen_list["bottom"];
-    bottom_obj.style.bottom = 0;
-    bottom_obj.style.position = "fixed";
-    
-    home_obj = screen_list["home"];
-    home_obj.style.display = "inline";
-}
-
-function change_screen(id){
-    Object.keys(screen_list).forEach(key => {
-        if(key != "bottom"){
-            screen_list[key].style.display = "none";
+    transition(screen_name){
+        for(let key in this.screen_list){
+            this.screen_list[key][0].style.display = "none";
         }
-    });
-    $('[data-screen="' + id + '"]').fadeIn(500);
+
+        this.screen_list[screen_name][0].style.display = "block";
+        this.screen_list[screen_name][0].classList.add(this.screen_list[screen_name][1]);        
+    }
 }

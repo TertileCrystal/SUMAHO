@@ -1,0 +1,50 @@
+body{
+    background-color: white;
+    color: black;
+}
+
+.fadeIn{
+    animation: fadeIn_animation 1s ease 0s 1 normal;
+}
+
+.slideUp{
+    animation: slideUp_animation 1s ease 0s 1 normal;
+}
+
+.zoom{
+    animation: zoom_animation 1s ease 0s 1 normal;
+}
+
+.none{
+
+}
+
+@keyframes fadeIn_animation{
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp_animation{
+    0%{
+        transform: translateY(200px);
+    }
+
+    100%{
+        transform: translateY(-200px);
+    }
+}
+
+@keyframes zoom_animation{
+    0%{
+        transform: scale(0);
+    }
+
+    100%{
+        transform: scale(1s);
+    }
+}
