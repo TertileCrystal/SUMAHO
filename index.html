@@ -6,6 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./main.css">
     <title>Document</title>
+
+    <style>
+        body{
+            height: 100vh;
+            position: relative;
+        }
+
+        #menu{
+            bottom: 0;
+            position: fixed;
+            z-index: 100;
+            background-color: white;
+            width: 100%;
+            height: 50px;
+        }
+
+        button{
+            height: 50px;
+        }
+
+        #home, #screen1, #screen2{
+            height: 100%;
+        }
+
+        h1{
+            margin: 0 0;
+        }
+    </style>
 </head>
 <body>
     <script type="text/javascript" src="./main.js"></script>
@@ -15,7 +43,6 @@
     </div>
     
     <div id="menu">
-        <h1>MENU</h1>
         <button onclick="sumaho.transition('screen1')">SCREEN1</button>
         <button onclick="sumaho.transition('screen2')">SCREEN2</button>
         <button onclick="sumaho.transition('home')">HOME</button>
@@ -23,9 +50,36 @@
     
     <div id="screen1">
         <h1>SCREEN1</h1>
+        <h1>SCREEN1</h1>
+        <h1>SCREEN1</h1>
+        <h1>SCREEN1</h1>
+        <h1>SCREEN1</h1>
+        <h1>SCREEN1</h1>
+        <h1>SCREEN1</h1>
+        <h1>SCREEN1</h1>
+        <h1>SCREEN1</h1>
+        <h1>SCREEN1</h1>
+        <h1>SCREEN1</h1>
+        <h1>SCREEN1</h1>
+        <h1>SCREEN1</h1>
     </div>
     
     <div id="screen2" style="background-color: red;">
+        <h1>SCREEN2</h1>
+        <h1>SCREEN2</h1>
+        <h1>SCREEN2</h1>
+        <h1>SCREEN2</h1>
+        <h1>SCREEN2</h1>
+        <h1>SCREEN2</h1>
+        <h1>SCREEN2</h1>
+        <h1>SCREEN2</h1>
+        <h1>SCREEN2</h1>
+        <h1>SCREEN2</h1>
+        <h1>SCREEN2</h1>
+        <h1>SCREEN2</h1>
+        <h1>SCREEN2</h1>
+        <h1>SCREEN2</h1>
+        <h1>SCREEN2</h1>
         <h1>SCREEN2</h1>
     </div>
 
@@ -36,7 +90,7 @@
         home : ["home", "fadeIn"],
         menu : "menu",
         screen : [
-                 ["screen1", "zoom"],
+                 ["screen1", "slideIn-up"],
                  ["screen2", "slideUp"]]
     });
 
